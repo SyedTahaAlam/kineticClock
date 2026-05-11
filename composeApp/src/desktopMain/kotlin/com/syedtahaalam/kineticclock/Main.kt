@@ -25,23 +25,24 @@ fun main() = application {
         resizable = true,
         onKeyEvent = { event ->
             if (event.type != KeyEventType.KeyDown) return@Window false
-            when (event.key) {
-                Key.Escape -> {
-                    if (fullScreen) {
-                        fullScreen = false
-                    } else {
-                        exitApplication()
-                    }
-                    true
-                }
-
-                Key.F, Key.Enter, Key.NumPadEnter -> {
-                    fullScreen = !fullScreen
-                    true
-                }
-
-                else -> false
-            }
+            true
+//            when (event.key) {
+//                Key.Escape -> {
+//                    if (fullScreen) {
+//                        fullScreen = false
+//                    } else {
+//                        exitApplication()
+//                    }
+//                    true
+//                }
+//
+//                Key.F, Key.Enter, Key.NumPadEnter -> {
+//                    fullScreen = !fullScreen
+//                    true
+//                }
+//
+//                else -> false
+//            }
         },
     ) {
         DisposableEffect(Unit) {

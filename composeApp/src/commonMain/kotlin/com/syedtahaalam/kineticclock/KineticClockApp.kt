@@ -110,27 +110,29 @@ fun KineticClockApp(modifier: Modifier = Modifier) {
             }
             .onPreviewKeyEvent { event ->
                 if (event.type != KeyEventType.KeyDown) return@onPreviewKeyEvent false
-                when (event.key) {
-                    Key.DirectionCenter, Key.Enter, Key.NumPadEnter, Key.Spacebar -> {
-                        use24Hour = !use24Hour
-                        true
-                    }
 
-                    Key.DirectionLeft, Key.DirectionDown -> {
-                        speed = (speed - 0.02f).coerceAtLeast(0.08f)
-                        true
-                    }
-
-                    Key.DirectionRight, Key.DirectionUp -> {
-                        speed = (speed + 0.02f).coerceAtMost(0.35f)
-                        true
-                    }
-
-                    else -> false
-                }
+                true
+//                when (event) {
+//                    Key.DirectionCenter, Key.Enter, Key.NumPadEnter, Key.Spacebar -> {
+//                        use24Hour = !use24Hour
+//                        true
+//                    }
+//
+//                    Key.DirectionLeft, Key.DirectionDown -> {
+//                        speed = (speed - 0.02f).coerceAtLeast(0.08f)
+//                        true
+//                    }
+//
+//                    Key.DirectionRight, Key.DirectionUp -> {
+//                        speed = (speed + 0.02f).coerceAtMost(0.35f)
+//                        true
+//                    }
+//
+//                    else -> false
+//                }
             },
     ) {
-        val _ = tick
+        val item = tick
         val cellSize = min(size.width / targets.cols.coerceAtLeast(1), size.height / targets.rows.coerceAtLeast(1))
         val gridWidth = cellSize * targets.cols
         val gridHeight = cellSize * targets.rows

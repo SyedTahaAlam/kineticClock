@@ -16,8 +16,8 @@ internal data class GridTargets(
 )
 
 internal val BackgroundColor = Color(0xFF05060A)
-internal val HandColor = Color(0xFFE8F6FF)
-internal val AccentColor = Color(0xFF5ED8FF)
+internal val HandColor = Color(0xFFE9FFE8)
+internal val AccentColor = Color(0xFF89FF5E)
 
 private val Off = HandTarget(0f, 0f, visible = false)
 private val Horizontal = HandTarget(90f, 270f)
@@ -35,7 +35,7 @@ private val glyphs: Map<Char, List<List<HandTarget>>> = mapOf(
     ),
     '1' to listOf(
         listOf(Off, Slash, Off),
-        listOf(Off, Vertical, Off),
+        listOf(Slash, Vertical, Off),
         listOf(Off, Vertical, Off),
         listOf(Off, Vertical, Off),
         listOf(Off, BackSlash, Horizontal),
