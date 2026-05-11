@@ -9,6 +9,7 @@ A Kotlin + Compose Multiplatform kinetic wall clock inspired by kinetic clock ar
 - Android phone + Android TV support (landscape-first, keep screen on, immersive mode)
 - TV remote / D-pad friendly input (toggle 12/24h and tune animation speed)
 - Desktop support for Windows, macOS, Linux with full-screen by default and wake-lock helper
+- iOS support via Compose Multiplatform framework + `MainViewController()`
 - Desktop packaging for `dmg` (macOS), `msi` (Windows), and `deb` (Linux)
 
 ## Run
@@ -23,6 +24,12 @@ A Kotlin + Compose Multiplatform kinetic wall clock inspired by kinetic clock ar
 
 ```bash
 ./gradlew :composeApp:run
+```
+
+### iOS (framework for Xcode integration)
+
+```bash
+./gradlew :composeApp:linkDebugFrameworkIosSimulatorArm64
 ```
 
 ## Package desktop apps
